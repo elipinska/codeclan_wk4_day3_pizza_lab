@@ -41,7 +41,7 @@ post ('/pizza_orders') do
 end
 
 #update
-post ('/pizza_orders/:id/edit') do
+post ('/pizza_orders/:id') do
   @order = PizzaOrder.new(params)
   @order.update()
   redirect("/pizza_orders")

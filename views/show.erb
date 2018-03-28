@@ -2,4 +2,8 @@
 
 <p>Name: <%= @order.pretty_name() %> </p>
 <p>Order: <%= @order.quantity%> x <%= @order.topping%></p>
+<form method="post" action="/pizza_orders/<%= @order.id%>/delete">
+  <input type="submit" value="Delete order"/>
+</form>
+<p><a href='/pizza_orders/<%= @order.id%>/edit'>Edit order</a></p>
 <hr>
