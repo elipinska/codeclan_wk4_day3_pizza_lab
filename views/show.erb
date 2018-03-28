@@ -1,7 +1,8 @@
-<p>Your pizza order:</p>
+<h2>Order details:</h2>
 
+<p>Type: <span><%= @order.topping%></span></p>
 <p>Name: <%= @order.pretty_name() %> </p>
-<p>Order: <%= @order.quantity%> x <%= @order.topping%></p>
+<p>Qty: <%= @order.quantity%></p>
 <form method="post" action="/pizza_orders/<%= @order.id%>/delete">
   <input type="submit" value="Delete order"/>
 </form>
